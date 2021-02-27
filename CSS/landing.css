@@ -8,7 +8,6 @@ body{
     width: 100vw;
     height: 100vh;
     background-image: url('https://i.pinimg.com/originals/95/57/38/95573892eaf39ae651f5be47b1105574.jpg');
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -16,6 +15,7 @@ body{
     text-align: center;
     align-items: center;
     justify-content: space-around;
+    opacity: 0.8;
 }
 
 
@@ -26,10 +26,8 @@ a {
 }
 
 body div {
-    width: 70%;
+    width: 80%;
     height: 25%;
-    margin-top: 8%;
-    margin-bottom: 2%;
     color: white;
 }
 #userAction {
@@ -42,12 +40,14 @@ body div {
 
 .startGame {
     width: 12%;
-    height: 55%;
-    background-color: rgb(4, 116, 4);
-    border: black 5px solid;
+    height: 65%;
+    background-color: rgb(18, 19, 18);
+    border: green 5px solid;
     color: white;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
 }
 .startGame:hover  {
     background-color: white;
@@ -60,19 +60,25 @@ body div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr;
-    grid-gap : 1%;
+    background-color: black;
+    border: white 1px solid;
+    margin-bottom: 20%;
+    /* position: absolute;
+    top: 1%; */
 }
 
 #info .infoGridBox {
     background-color: black;
-    border: white 2px solid;
+    border: white 1px solid;
     width: 100%;
-    height: 80%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 0;
 
 }
+
 
 .infoGridBox .infoTool {
     background-position: center;
@@ -80,10 +86,14 @@ body div {
     background-size: cover;
     width: 20%;
     height: 50%;
+    padding: 5%;
+    font-weight: bold;
 }  
 
 #info  h3 {
     grid-column: 1/4;
+    margin-bottom: 1%;
+    font-size: 24px;
 }
 
 @media only screen 
@@ -91,18 +101,22 @@ body div {
   and (max-device-width: 736px) 
   and (orientation: landscape) {
     .startGame {
-        width: 18%;
-        height: 75%;
-        font-size: small;
-        margin-bottom: 5%;
+        width: 12%;
+        height: 65%;
+        font-size: 18px;
+        margin-bottom: 3%;
   }
   #info .infoGridBox {
     height: 100%;
+    width: 100%;
     font-size: small;
     padding: 2%;
   }
+  .infoTool {
+      font-size: 8px;
+  }
   #info  h3 {
-      margin-top: 5%;
     font-size: small;
+    margin-top: 1%;
 }
 }

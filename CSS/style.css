@@ -102,33 +102,33 @@ aside {
 }
 
 .axe {
-    background-image: url('./media/axe.png');
+    background-image: url('../media/axe.png');
 }
 .pickaxe {
-    background-image: url('./media/pick.png');
+    background-image: url('../media/pick.png');
 }
 .shovel {
-    background-image: url('./media/shovel1.png');
+    background-image: url('../media/shovel1.png');
 }
 
 .cloud {
-    background-image: url(./media/cloud.png);
+    background-image: url(../media/cloud.png);
 }
 
 .grass {
-    background-image: url(./media/grass.png);
+    background-image: url(../media/grass.png);
 }
 .soil {
-    background-image: url(./media/soil.jpg);
+    background-image: url(../media/soil.jpg);
 }
 .leaves {
-    background-image: url(./media/tree-leaves.png);
+    background-image: url(../media/tree-leaves.png);
 }
 .wood {
-    background-image: url(./media/wood.png);
+    background-image: url(../media/wood.png);
 }
 .rock {
-    background-image: url(./media/rock.png);
+    background-image: url(../media/rock.png);
 }
 
 .switchMode , .resetWorld {

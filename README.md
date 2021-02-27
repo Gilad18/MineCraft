@@ -6,7 +6,7 @@ Pure JS & HTML & CSS
  
 ## Getting Started
  
-I was asked to create my very own Minecraft mock in less than 3 days nad this is the result.
+I was asked to create my very own Minecraft mock in less than 3 days and this is the result.
  
 ### Installing
  
@@ -19,7 +19,9 @@ The object of the tiles and tools is set to get access to specific properties wh
 JS first function in creating the 'world' and setting the grid appearance based on matrixes that were already designed.
  
 Game has 2 states:
+
 let isUsingTool = true;
+
 let isUsingMatter = false;
  
 base on these states, once a grid item is clicked, one of the following functions is invoked:
