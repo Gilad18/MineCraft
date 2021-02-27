@@ -149,7 +149,6 @@ aside {
 }
 
 @media only screen 
-  and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (orientation: landscape) { 
 
@@ -161,7 +160,10 @@ aside {
         color: var(--lightText);
         border-radius: 15%;
         margin-bottom: 3%;
-        margin-top: 2%;
-        font-size:12px ;
+        margin-top: 3%;
+        font-size:10px ;
+    }
+    .matter div {
+        font-size: 10px;
     }
 }
