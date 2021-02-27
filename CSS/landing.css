@@ -97,8 +97,7 @@ body div {
 }
 
 @media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
+  and (min-device-width: 1100px) 
   and (orientation: landscape) {
     .startGame {
         width: 12%;
