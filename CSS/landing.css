@@ -96,9 +96,10 @@ body div {
     font-size: 24px;
 }
 
-@media only screen 
-  and (min-device-width: 1100px) 
-  and (orientation: landscape) {
+@media only screen  
+and (max-device-width: 1100px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) { 
     .startGame {
         width: 12%;
         height: 65%;
