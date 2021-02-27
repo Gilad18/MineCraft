@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MineCraft</title>
+    <title>MineCraft | Welcome</title>
+    <link rel="stylesheet" href="landing.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="grid">
-           </div>
-    <aside id="sideBar">
-       <button class="resetWorld">Reset World</button>
-       <section class="tools">
-         <div class="axe"></div>
-         <div class="pickaxe"></div>
-         <div class="shovel"></div>
-    </section>
-    <section class="matter">
-         <div class="grass" ></div>
-         <div class="soil" ></div>
-         <div class="wood" ></div>
-         <div class="leaves" ></div>
-         <div class="rock" ></div>
-    </section> 
-    <button class="switchMode">Dark Mode</button>
-    </aside>
+    
+    <div id="userAction">
+     <button class="startGame"><a href="minecraft.html">Start Game</a></button>
+    </div>
+    <div id="info">  
+        <div class="infoGridBox">
+            <div class="infoTool axe" ></div>
+            <h4>For</h4>
+            <div class="infoTool wood" ></div>
+            <h4>and</h4>
+            <div class="infoTool leaves" ></div>
+        </div>
+        <div class="infoGridBox">
+            <div class="infoTool pickaxe"></div>
+            <h4>For</h4>
+            <div class="infoTool rock" ></div>
+        </div>
+        <div class="infoGridBox">
+            <div class="infoTool shovel"></div>
+            <h4>For</h4>
+            <div class="infoTool soil" ></div>
+            <h4>and</h4>
+            <div class="infoTool grass" ></div>
+        </div>
+        <h3>Use your tools to acquirer new matter and 
+            build your new world with it</h3>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

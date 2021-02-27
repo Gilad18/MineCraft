@@ -4,29 +4,19 @@ const matter = document.querySelectorAll('.matter div');
 const resetWorld = document.querySelector('.resetWorld');
 const SwitchMode = document.querySelector('.switchMode');
 
-
-for (let i = 0; i < 3; i++) {                           //change to forEach and movedown
-    tool[i].setAttribute('data', i + 1);
-}
-
-for (let i = 0; i < 5; i++) {
-    matter[i].setAttribute('data', i + 1);
-}
-
 let grassRow;       
 let smallTreeCol;    
 let BigTreeCol;      
 let BigRockColl;     
-let smallCloud;         // apply in random
+let smallCloud;       
 let bigCloud;       
-
 let toolID;
 let matterID;
 let isUsingTool = false;
 let isUsingMatter = false;
 let darkMode = false;
 
-const tools = {
+const toolPower = {
     1: ['wood', 'leaves'],
     2: ['rock'],
     3: ['soil', 'grass']
@@ -97,7 +87,7 @@ const toggleMode = () => {
 };
 
 const harverst = (cell) => {
-    if (tools[toolID].includes(cell.getAttribute('class')) && isUsingTool ===true) {
+    if (toolPower[toolID].includes(cell.getAttribute('class')) && isUsingTool ===true) {
         let tilesObj = tiles.findTilebyName(cell.getAttribute('class'));
         tilesObj.amount++;
         matter[tilesObj.id-1].innerHTML = tilesObj.amount;
@@ -108,13 +98,9 @@ const harverst = (cell) => {
 const implant = (cell) => {
         if (!cell.getAttribute('class')) {
             if(isUsingMatter === true && matterID.amount > 0 ) {
-                console.log('implant invoked');
-                console.log(matterID);
-                console.log(cell);
                 cell.classList.add(matterID.name);
                 matterID.amount--
                 matter[matterID.id-1].innerHTML = matterID.amount;
-                console.log(tiles);
         } else matter[matterID.id-1].style.border = '2px red solid';
      }  
 };
@@ -195,7 +181,6 @@ const bigClaudM = [
     [0, 0, 0, 0, 1]
 ]
 
-
 const createWorld = () => {
 
     board.innerHTML = '';
@@ -216,8 +201,6 @@ const createWorld = () => {
     for (let k = 0; k < 20; k++) {
         for (let i = 0; i < 30; i++) {
             let box = document.createElement('div');
-            box.setAttribute('col', i);
-            box.setAttribute('row', k);
             if (k > grassRow) {
                 box.classList.add('soil');
             }
@@ -264,11 +247,16 @@ const createWorld = () => {
 }
 
 tool.forEach(myTool => myTool.addEventListener('click', getTool));
-
-
-
 matter.forEach(myMatter => myMatter.addEventListener('click', getMatter));
 SwitchMode.addEventListener('click', toggleMode);
+
+for (let i = 0; i < 3; i++) {                          
+    tool[i].setAttribute('data', i + 1);
+}
+
+for (let i = 0; i < 5; i++) {
+    matter[i].setAttribute('data', i + 1);
+}
 
 
 createWorld();
